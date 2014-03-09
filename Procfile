@@ -1,1 +1,1 @@
-web: rsvp-bible -port=$PORT
+web: speedy-bible -port=$PORT
