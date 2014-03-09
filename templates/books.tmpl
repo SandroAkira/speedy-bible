@@ -1,0 +1,12 @@
+<h1 class="cover-heading">Speed Read the Bible</h1>
+<p class="lead">By not moving your eyes, you can read much faster.  Give it a shot at 400 words per minute (normal is 250ish).</p>
+<div class="row">
+  {{ range $book := .Books }}
+   <div class='hidden-xs padded col-xs-4 col-sm-4 col-md-4'>
+     <a class='btn btn-info btn-block' href="/{{$book.Url}}">{{$book.Name}}</a>
+   </div>
+   <div class='visible-xs padded col-xs-4 col-sm-4 col-md-4'>
+     <a class='btn btn-info btn-block' href="/{{$book.Url}}">{{$book.ShortName}}</a>
+   </div>
+  {{ end }}
+</div>

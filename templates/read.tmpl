@@ -1,0 +1,61 @@
+<div id="rsvp_holder">
+  <div id="rsvp_container">
+    <div class="guide">――――――――――――――</div>
+    <div id="rsvp_result">{{.Chapter.Book.Name}} {{.Chapter.Number}}</div>
+    <div class="guide">――――――――――――――</div>
+    <div id="rsvp_me">{{.Body}}</div>
+  </div>
+</div>
+<div class='row padded'>
+  <div class="form-group">
+    <div class="col-md-6 col-md-offset-3">
+    <select class='form-control' id="selector">
+      <option value="100">100wpm</option>
+      <option value="200">200wpm</option>
+      <option value="300">300wpm</option>
+      <option selected value="400">400wpm</option>
+      <option value="500">500wpm</option>
+      <option value="600">600wpm</option>
+      <option value="700">700wpm</option>
+      <option value="800">800wpm</option>
+      <option value="900">900wpm</option>
+      <option value="1000">1000wpm</option>
+    </select> 
+    </div>
+  </div>
+</div>
+<div class='row'>
+  <div class="col-md-12 col-xs-12">
+    <a href="/" class="btn btn-lg btn-info">Back</a>
+    <button class='btn btn-lg btn-success' id="play">
+      <span class='glyphicon glyphicon-play'></span>
+    </button>
+    <button class='btn btn-lg btn-danger hidden' id="pause">
+      <span class='glyphicon glyphicon-pause'></span>
+    </button>
+    <button class='btn btn-lg btn-success hidden' id="resume">
+      <span class='glyphicon glyphicon-play'></span>
+    </button>
+    <a href="/{{.Chapter.Book.Url}}/{{.Chapter.NextNumber}}" class="btn btn-lg btn-info">Next</a>
+  </div>
+</div>
+
+<script>
+$( document ).ready(function() {
+    $('#play').click(function() {
+      var valueSelected = $("#selector").val();
+      var rez = rsvpify('#rsvp_me', valueSelected);
+      $('#play').addClass('hidden');
+      $('#pause').removeClass('hidden');
+    });
+    $('#selector').on('change', function (e) {
+      $('#rsvp_me').queue("fx",[]);
+    });
+    $('#pause').click(function() {
+      pauseReading('#rsvp_me');
+    });
+    $('#resume').click(function() {
+      resumeReading('#rsvp_me');
+    });
+});
+</script>

@@ -1,0 +1,10 @@
+{{ $book := . }}
+<h1 class="cover-heading">{{$book.Name}}</h1>
+<p class="lead">Select a Chapter</p>
+<div class="row">
+  {{ range $chapter := $book.Chapters }}
+   <div class='padded col-xs-4 col-sm-4 col-md-4'>
+     <a class='btn btn-info btn-block' href="/{{$chapter.Book.Url}}/{{$chapter.Number}}">{{$chapter.Number}}</a>
+   </div>
+  {{ end }}
+</div>

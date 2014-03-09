@@ -1,0 +1,32 @@
+#rsvp_holder{
+  min-height: 166px;
+}
+
+.padded {
+  margin-bottom: 10px;
+}
+
+#rsvp_me{
+  display: none;
+}
+
+#rsvp_container{
+  line-height: 43px;
+}
+
+#rsvp_result{
+  text-align: center;
+  font-size: 32px;
+  font-family: 'Droid Sans Mono', sans-serif;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  min-height: 61px;
+  color: #333;
+}
+
+.guide{
+  text-align: center;
+  font-size: 32px;
+  font-family: 'Droid Sans Mono', sans-serif;
+  color: #333;
+}
