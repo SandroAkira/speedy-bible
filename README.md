@@ -6,3 +6,7 @@ Inspired by [Spritz](http://www.spritzinc.com) and [OpenSpritz](http://github.co
 A simple clean interface, Rapid Serial Visual Presentation of words, and [Go](http://www.golang.org) to make it even faster.
 
 I welcome you to contribute!
+
+## Demo
+
+[On Heroku](http://speedy-bible.herokuapp.com/)
